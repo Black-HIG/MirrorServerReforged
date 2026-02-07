@@ -63,7 +63,7 @@ syncFlag = False
 
 
 def InitalizeOnFirstRun():
-    if os.path.exists(f'{config['target']}/MCDReforged.py') or 'mcdreforged' in config['command']:
+    if os.path.exists(f'{config["target"]}/MCDReforged.py') or 'mcdreforged' in config['command']:
         global MCDR
         MCDR = True     # Turn on MCDR mode
     if not os.path.exists(config['target']):
