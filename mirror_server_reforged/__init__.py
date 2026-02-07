@@ -63,10 +63,10 @@ syncFlag = False
 
 
 def InitalizeOnFirstRun():
-    if os.path.exists('./Mirror/MCDReforged.py') or 'mcdreforged' in config['command']:
+    if os.path.exists(f'{config['target']}/MCDReforged.py') or 'mcdreforged' in config['command']:
         global MCDR
         MCDR = True     # Turn on MCDR mode
-    if not os.path.exists('./Mirror'):
+    if not os.path.exists(config['target']):
         print('[MirrorServerReforged] 看起来你是第一次运行本插件？我们将会为您进行首次运行的初始化')
         print('[MirrorServerReforged] 正在创建镜像文件夹……')
         if MCDR:    # MCDR mode on, create Mirror folder and a server folder in Mirror folder
